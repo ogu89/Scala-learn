@@ -16,7 +16,7 @@ object FunctionalProgramming {
 
   // general multiply function
   val miltiply = new Function2[Int, Int, Int]{
-    overried def apply(v1: Int, v2: Int): Int = v1 * v2
+    override def  apply(v1: Int, v2: Int): Int = v1 * v2
   }
 
   // way 1: anonymous function
@@ -46,7 +46,7 @@ object FunctionalProgramming {
 
   // curry addition
   val curryAddition: Int => (Int => Int) = x => (y => x + y)
-  println(curreyAddition(1)(2)) //println 3
+  println(curryAddition(1)(2)) //println 3
 
   // first curryAddition(1) evaluates to a function of type (Int => Int) = y: Int => 1 + y
   // second, it takes (2) as an argument and pass it to the evaluated function
